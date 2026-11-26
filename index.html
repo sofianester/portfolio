@@ -30,6 +30,30 @@
             d.setAttribute('data-theme', t);
         })();
     </script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4QT49KC50"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-P4QT49KC50');
+
+        // Named events for the links that matter: Resume, Figma projects, LinkedIn, email.
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest && e.target.closest('a[href]');
+            if (!a) return;
+            var href = a.getAttribute('href'), name = null, params = {};
+            if (href.indexOf('drive.google.com') !== -1) name = 'resume_click';
+            else if (href.indexOf('figma.com') !== -1) name = 'figma_project_click';
+            else if (href.indexOf('linkedin.com') !== -1) name = 'linkedin_click';
+            else if (href.indexOf('mailto:') === 0) name = 'email_click';
+            if (!name) return;
+            var title = a.querySelector('h3');
+            params.link_location = a.closest('nav, header') ? 'nav' : (a.closest('section') ? a.closest('section').id || 'page' : 'page');
+            if (title) params.project = title.textContent.trim();
+            gtag('event', name, params);
+        });
+    </script>
 </head>
 <body>
     <div class="scroll-progress" aria-hidden="true"></div>
