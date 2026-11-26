@@ -52,16 +52,17 @@
 	function countUp(el) {
 		var target = parseInt(el.getAttribute('data-count'), 10);
 		var suffix = el.getAttribute('data-suffix') || '';
-		if (reduce || !target) { el.textContent = target + suffix; return; }
+		var prefix = el.getAttribute('data-prefix') || '';
+		if (reduce || !target) { el.textContent = prefix + target + suffix; return; }
 		var start = null, dur = 1600;
 		function step(t) {
 			if (!start) start = t;
 			var p = Math.min((t - start) / dur, 1);
 			var eased = 1 - Math.pow(1 - p, 4);
-			el.textContent = Math.round(target * eased) + suffix;
+			el.textContent = prefix + Math.round(target * eased) + suffix;
 			if (p < 1) requestAnimationFrame(step);
 		}
-		el.textContent = '0' + suffix;
+		el.textContent = prefix + '0' + suffix;
 		requestAnimationFrame(step);
 	}
 

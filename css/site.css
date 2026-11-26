@@ -707,3 +707,9 @@ body::before {
 .site-list .site-idx i { justify-self: auto; font-size: .85rem; color: var(--muted); transform: rotate(-45deg); }
 .site-list a:hover .site-idx i { transform: rotate(0); color: var(--text); }
 @media (max-width: 600px) { .site-list a { grid-template-columns: 22px 1fr; } }
+
+/* Stats: number + what it is + one line of context (from the CV) */
+.stat { display: flex; flex-direction: column; }
+.stat-label { margin-top: 12px; color: var(--text); font-weight: 600; font-size: 1rem; }
+.stat-desc { margin: 8px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+@media (max-width: 600px) { .stats { grid-template-columns: 1fr; } .stat { border-left: 0; border-top: 1px solid var(--line); padding: 20px 4px; } .stat-desc { font-size: .88rem; } }
