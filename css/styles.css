@@ -1526,3 +1526,37 @@ a:hover.back-to-top {
 	.xp-item { padding: 1.25rem; }
 	.impact-num { font-size: 1.75rem; line-height: 2.25rem; }
 }
+
+/* Simple top nav */
+html { scroll-behavior: smooth; }
+#projects, #websites, #experience, #skills, #contact { scroll-margin-top: 3.5rem; }
+.site-nav {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	z-index: 1030;
+	background-color: rgba(24, 25, 28, 0.92);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.site-nav-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	min-height: 3.5rem;
+}
+.site-nav-brand {
+	color: #ffffff;
+	font: 600 1rem/1.5rem "Poppins", sans-serif;
+	white-space: nowrap;
+}
+.site-nav-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; justify-content: flex-end; }
+.site-nav a { color: #e6e8eb; font-size: 0.95rem; }
+.site-nav a:hover { color: #ffffff; text-decoration: none; }
+@media (max-width: 767px) {
+	.site-nav-brand { display: none; }
+	.site-nav-inner { justify-content: center; }
+	.site-nav-links { justify-content: center; gap: 0.25rem 1rem; }
+	.site-nav a { font-size: 0.875rem; }
+}
