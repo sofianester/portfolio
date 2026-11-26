@@ -752,3 +752,6 @@ body::before { display: none; }
 .stats .stat:first-child { border-left: 0; padding-left: 0; }
 @media (max-width: 600px) { .stats .stat:first-child { border-top: 0; } }
 @media (max-width: 600px) { .stats .stat:first-child { padding-left: 4px; } }
+
+/* Footer: no divider line */
+.footer{border-top:0}
