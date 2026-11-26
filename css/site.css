@@ -691,3 +691,6 @@ body::before {
 .project-card:hover .project-btn { opacity: .86; }
 @media (max-width: 900px) { .project-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .project-grid { grid-template-columns: 1fr; } }
+.hero-role .seg { color: inherit; margin: 0; white-space: nowrap; }
+.hero-role .sep { color: var(--line-2); margin: 0 4px; }
+@media (max-width: 600px) { .hero-role .sep { display: none; } .hero-role .seg { display: block; } }
