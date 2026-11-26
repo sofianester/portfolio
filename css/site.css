@@ -769,3 +769,9 @@ body::before { display: none; }
 .contact-links { align-items: center; }
 .resume-alt { color: var(--muted); font-size: .88rem; text-decoration: underline; text-underline-offset: 3px; }
 .resume-alt:hover { color: var(--text); }
+
+/* Logo + hero portrait synced from Figma (Asset / Logo, Asset / Portrait cut-out) */
+.nav-mark span { color: #33d499; }
+.portrait { aspect-ratio: 1070 / 1026; }
+.portrait-orb { display: none; }
+.portrait img { border-radius: 0; }
