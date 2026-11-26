@@ -694,3 +694,16 @@ body::before {
 .hero-role .seg { color: inherit; margin: 0; white-space: nowrap; }
 .hero-role .sep { color: var(--line-2); margin: 0 4px; }
 @media (max-width: 600px) { .hero-role .sep { display: none; } .hero-role .seg { display: block; } }
+
+/* Skills overview (static, replaces the scrolling marquee) */
+.skills-overview { padding-block: 28px; border-block: 1px solid var(--line); }
+.skill-pills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.skill-pills li { padding: 9px 16px; border: 1px solid var(--line-2); border-radius: 999px; font: 600 .95rem/1 var(--display); color: var(--text); background: var(--surface); white-space: nowrap; }
+@media (max-width: 600px) { .skill-pills { gap: 8px; } .skill-pills li { font-size: .85rem; padding: 8px 13px; } }
+
+/* Websites list: small arrow instead of a, b, c letters */
+.site-list a { grid-template-columns: 28px 1fr auto; }
+.site-idx { display: inline-flex; align-items: center; justify-content: flex-start; }
+.site-list .site-idx i { justify-self: auto; font-size: .85rem; color: var(--muted); transform: rotate(-45deg); }
+.site-list a:hover .site-idx i { transform: rotate(0); color: var(--text); }
+@media (max-width: 600px) { .site-list a { grid-template-columns: 22px 1fr; } }
