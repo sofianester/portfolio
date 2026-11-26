@@ -1,0 +1,38 @@
+# Mirrors this repo's main branch to sofianester/pizza on every push,
+# so https://sofianester.github.io/pizza/ always shows the same site.
+# Needs a repository secret PIZZA_SYNC_TOKEN: a fine-grained token with
+# Contents: Read and write and Workflows: Read and write on sofianester/pizza.
+name: Sync to pizza
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: sync-to-pizza
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Only run in portfolio, not in the pizza copy of this file.
+    if: github.repository == 'sofianester/portfolio'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push main to pizza
+        env:
+          TOKEN: ${{ secrets.PIZZA_SYNC_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::Secret PIZZA_SYNC_TOKEN is not set in this repo."
+            exit 1
+          fi
+          # Plain push (no force): fails loudly if pizza ever gets commits
+          # that portfolio doesn't have, instead of overwriting them.
+          git push "https://x-access-token:${TOKEN}@github.com/sofianester/pizza.git" HEAD:refs/heads/main
