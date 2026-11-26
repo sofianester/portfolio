@@ -589,7 +589,8 @@ body::before {
 
 /* Hero */
 .eyebrow { border-radius: 8px; border-color: var(--line); background: transparent; }
-.portrait { aspect-ratio: 755 / 900; }
+.portrait { aspect-ratio: 900 / 855; }
+.hero-visual { width: min(470px, 100%); }
 .portrait img {
 	-webkit-mask-image: none; mask-image: none;
 	border-radius: 0 0 24px 24px;
@@ -660,3 +661,10 @@ body::before {
 .contact-email { background-image: linear-gradient(var(--text), var(--text)); }
 @media (max-width: 600px) { .contact-inner { padding: 48px 18px; } .section { padding-top: 88px; } }
 :root[data-theme] .portrait-orb { box-shadow: none; }
+
+/* Mobile hero: keep the photo whole and unobstructed; tags sit in a row under it */
+@media (max-width: 600px) {
+	.hero-visual { width: 100%; max-width: 380px; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+	.hero-visual .portrait { flex: 0 0 100%; margin-bottom: 10px; }
+	.hero-visual .float-chip { position: static; animation: none; transform: none; }
+}
