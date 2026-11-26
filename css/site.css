@@ -775,3 +775,14 @@ body::before { display: none; }
 .portrait { aspect-ratio: 1070 / 1026; }
 .portrait-orb { display: none; }
 .portrait img { border-radius: 0; }
+
+/* Synced from Figma design system (Button component, 2026-11-26):
+   primary = Brand/Gradient pill, ghost = hairline pill (radius/pill). */
+:root { --btn-radius: 999px; }
+.btn-grad, .btn-grad:hover, .nav-cta, .nav-cta:hover {
+	background: var(--grad); background-size: 100% 100%; color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .25); opacity: 1;
+}
+.btn-grad:hover, .nav-cta:hover { filter: brightness(1.08); }
+.nav-links a.active { border-radius: 999px; }
+.theme-toggle { border-radius: 10px; } /* Theme toggle keeps radius/btn */
