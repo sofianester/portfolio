@@ -1,27 +1,23 @@
 # Sofiane Benslimane Portfolio
 
-This is a portfolio website for Sofiane Benslimane, a Senior Design Technologist with expertise in UX/UI, Design Systems, and AI-Driven Marketing.
+Personal portfolio site for Sofiane Benslimane, Senior Creative Designer, UX/UI Lead and Front-End Developer based in Bangkok.
 
-## Contents
+Live at https://sofianester.github.io/portfolio/ (GitHub Pages, served straight from `main`; there is no build step).
 
-- **index.html** - Main portfolio page
-- **project.html** - Project details page
-- **terms.html** - Terms & Conditions
-- **privacy.html** - Privacy Policy
-- **css/** - Stylesheets (Bootstrap, Font Awesome, custom styles)
-- **js/** - JavaScript files
-- **images/** - Image assets
+## Structure
 
-## Features
+- `index.html` - the single page: hero, selected work (Figma links), contact
+- `css/` - Bootstrap 4, Font Awesome and the custom `styles.css`
+- `js/` - jQuery, Bootstrap, jQuery Easing and `scripts.js`
+- `webfonts/` - Font Awesome font files (referenced from `css/fontawesome-all.css`)
+- `images/` - site images
+- `Sofiane-Benslimane-07-2026.pdf` - resume
 
-- Responsive design using Bootstrap
-- Social media links (LinkedIn, Email)
-- Links to Figma projects
-- Resume PDF download
-- Contact information
+## Adding project images
+
+Keep images small: resize to about 1400 px wide and compress before committing
+(the full-size Figma exports were 10-18 MB each).
 
 ## Credits
 
-Based on Miniport template by HTML5 UP (html5up.net)
-- Licensed under Creative Commons Attribution 3.0
-- Built with HTML, CSS, Bootstrap, jQuery, and Font Awesome
+Built on a free Bootstrap 4 landing-page template, with HTML, CSS, Bootstrap, jQuery and Font Awesome.
