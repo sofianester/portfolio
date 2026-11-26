@@ -755,3 +755,9 @@ body::before { display: none; }
 
 /* Footer: no divider line */
 .footer{border-top:0}
+
+/* Cards: soft blurred shadow instead of a border (easy to revert: delete this block) */
+:root { --card-shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 32px -8px rgba(0,0,0,.55); --card-shadow-hover: 0 2px 4px rgba(0,0,0,.4), 0 20px 44px -10px rgba(0,0,0,.65); }
+:root[data-theme="light"] { --card-shadow: 0 1px 2px rgba(40,30,35,.05), 0 12px 32px -10px rgba(40,30,35,.14); --card-shadow-hover: 0 2px 4px rgba(40,30,35,.06), 0 20px 44px -12px rgba(40,30,35,.2); }
+.project-card, .tool-card, .tl-body { border-color: transparent; box-shadow: var(--card-shadow); transition: transform .3s ease, box-shadow .3s ease; }
+.project-card:hover, .tool-card:hover, .tl-body:hover { border-color: transparent; box-shadow: var(--card-shadow-hover); }
