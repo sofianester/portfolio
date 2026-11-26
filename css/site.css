@@ -730,3 +730,14 @@ body::before {
 .stats-sub { margin: 0; color: var(--muted); font-size: .95rem; }
 .stats-head + .stats { padding-top: 32px; }
 @media (max-width: 600px) { .stats-head { text-align: left; padding-top: 40px; } .stats-head + .stats { padding-top: 16px; } }
+
+/* Breathable layout: no side frame lines, more room around and between sections */
+body::before { display: none; }
+.wrap { width: min(1160px, 100% - 96px); }
+.section { padding-top: 152px; }
+.skills-overview { padding-block: 64px; }
+.stats-head { padding-top: 88px; }
+.stats-head + .stats { padding-top: 48px; }
+.stats { gap: 24px; }
+@media (max-width: 900px) { .wrap { width: min(1160px, 100% - 56px); } }
+@media (max-width: 600px) { .wrap { width: calc(100% - 40px); } .section { padding-top: 104px; } .skills-overview { padding-block: 48px; } .stats-head { padding-top: 56px; } }
