@@ -9,6 +9,42 @@
 	// Hero entrance
 	requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('loaded'); }); });
 
+	// Theme toggle
+	var themeBtns = document.querySelectorAll('[data-set-theme]');
+	var metaTheme = document.getElementById('theme-color');
+	function paintTheme(t) {
+		root.setAttribute('data-theme', t);
+		themeBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set-theme') === t)); });
+		if (metaTheme) metaTheme.setAttribute('content', t === 'light' ? '#f6f3ee' : '#0b0c10');
+	}
+	paintTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+	themeBtns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			var t = btn.getAttribute('data-set-theme');
+			if (t === root.getAttribute('data-theme')) return;
+			try { localStorage.setItem('theme', t); } catch (e) {}
+			if (reduce) { paintTheme(t); return; }
+			if (document.startViewTransition) {
+				var r = btn.getBoundingClientRect();
+				var x = r.left + r.width / 2, y = r.top + r.height / 2;
+				root.style.setProperty('--tx', x + 'px');
+				root.style.setProperty('--ty', y + 'px');
+				root.style.setProperty('--tr', Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y)) + 'px');
+				document.startViewTransition(function () { paintTheme(t); });
+			} else {
+				root.classList.add('theme-fade');
+				paintTheme(t);
+				setTimeout(function () { root.classList.remove('theme-fade'); }, 550);
+			}
+		});
+	});
+	try {
+		window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
+			var saved = null; try { saved = localStorage.getItem('theme'); } catch (err) {}
+			if (!saved) paintTheme(e.matches ? 'light' : 'dark');
+		});
+	} catch (e) {}
+
 	var yearEl = document.getElementById('year');
 	if (yearEl) yearEl.textContent = new Date().getFullYear();
 
