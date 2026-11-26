@@ -15,7 +15,7 @@
 	function paintTheme(t) {
 		root.setAttribute('data-theme', t);
 		themeBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-set-theme') === t)); });
-		if (metaTheme) metaTheme.setAttribute('content', t === 'light' ? '#f6f3ee' : '#0b0c10');
+		if (metaTheme) metaTheme.setAttribute('content', t === 'light' ? '#ece6e8' : '#0f0e0f');
 	}
 	paintTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
 	themeBtns.forEach(function (btn) {
