@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Email design system &amp; AI production pipeline | Sofiane Benslimane</title>
+    <meta name="description" content="Case study: how I led a modular email design system and an AI-assisted Figma to HTML to Litmus to ESP pipeline at Agoda, cutting production time by 50% across 13+ languages.">
+    <meta name="author" content="Sofiane Benslimane">
+    <meta name="theme-color" content="#0f0e0f" id="theme-color">
+
+    <meta property="og:site_name" content="Sofiane Benslimane">
+    <meta property="og:title" content="Email design system &amp; AI production pipeline | Sofiane Benslimane">
+    <meta property="og:description" content="A modular email system and an AI-assisted production pipeline for 200+ personalized campaigns a month in 13+ languages.">
+    <meta property="og:image" content="https://sofianester.github.io/portfolio/images/cs/email/overview.webp">
+    <meta property="og:url" content="https://sofianester.github.io/portfolio/case-studies/email-design-system.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="../css/fontawesome-all.css" rel="stylesheet">
+    <link href="../css/site.css" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.png">
+    <script>
+        (function () {
+            var d = document.documentElement, t = null;
+            d.classList.add('js');
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            d.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4QT49KC50"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-P4QT49KC50');
+    </script>
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <nav class="nav" aria-label="Main">
+        <a class="nav-mark" href="../index.html" aria-label="Home">SB<span>.</span></a>
+        <div class="nav-links">
+            <a href="../index.html#work">Work</a>
+            <a href="../index.html#experience">Experience</a>
+            <a href="../index.html#toolkit">Toolkit</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+        <div class="nav-right">
+            <div class="theme-toggle" role="group" aria-label="Colour theme">
+                <button type="button" data-set-theme="light" aria-label="Light mode" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+                </button>
+                <button type="button" data-set-theme="dark" aria-label="Dark mode" aria-pressed="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+                </button>
+            </div>
+            <a class="nav-cta" href="https://drive.google.com/drive/folders/10J15_QK1muaCdRd8IGOC7ENUlT-Y8qq2?usp=sharing" target="_blank" rel="noopener noreferrer">Resume <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <header class="cs-hero">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob-1"></span>
+                <span class="blob blob-2"></span>
+                <span class="hero-grid"></span>
+            </div>
+            <div class="wrap">
+                <a class="cs-back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to work</a>
+                <span class="cs-eyebrow load-in" style="--d:0">Case study 01 · Agoda</span>
+                <h1 class="cs-title load-in" style="--d:1">One email system for 13+ markets, and an <span class="grad-text">AI pipeline</span> to ship it.</h1>
+                <p class="cs-lede load-in" style="--d:2">I led the design of Agoda's modular email design system and the production pipeline behind it, taking campaigns from Figma to HTML, through Litmus testing, to the ESP, with AI handling the repetitive steps.</p>
+
+                <dl class="cs-meta load-in" style="--d:3">
+                    <div><dt>Role</dt><dd>Lead Designer</dd></div>
+                    <div><dt>Partners</dt><dd>Customer Marketing, Partner Communications, email developers</dd></div>
+                    <div><dt>Scope</dt><dd>B2C &amp; B2B email, popups, campaign banners</dd></div>
+                    <div><dt>Tools</dt><dd>Figma, HTML/CSS + Outlook-safe VML, Litmus, Make, Vertex AI, Google Sheets</dd></div>
+                </dl>
+
+                <figure class="cs-cover load-in" style="--d:4">
+                    <img src="../images/cs/email/overview.webp" width="1400" height="728" alt="Overview of the Customer Marketing email design guideline in Figma: a starter template, header and footer variants, banner section, body components and tokens.">
+                </figure>
+            </div>
+        </header>
+
+        <section class="wrap cs-section">
+            <div class="cs-stats">
+                <div class="stat reveal"><span class="stat-num">50%</span><span class="stat-label">faster email production</span></div>
+                <div class="stat reveal" style="--d:1"><span class="stat-num">200+</span><span class="stat-label">personalized campaigns a month</span></div>
+                <div class="stat reveal" style="--d:2"><span class="stat-num">13+</span><span class="stat-label">languages and markets</span></div>
+                <div class="stat reveal" style="--d:3"><span class="stat-num">15</span><span class="stat-label">market template sets for campaign assets</span></div>
+            </div>
+        </section>
+
+        <section class="wrap cs-section">
+            <div class="cs-grid">
+                <p class="cs-label reveal"><span>01</span>The challenge</p>
+                <div class="cs-body reveal">
+                    <h2>Every campaign was rebuilt by hand, in every language.</h2>
+                    <p>Agoda sends lifecycle and campaign emails to travelers and hotel partners across Asia and beyond. Each product (hotels, flights, activities, cross-sell) had its own look, each market needed its own copy, and every email had to survive Outlook as well as modern clients.</p>
+                    <p>Without a shared system, designers rebuilt layouts from scratch, developers re-coded the same blocks, and localization meant duplicating files one language at a time. Consistency suffered and the team couldn't scale personalization.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap cs-section">
+            <div class="cs-grid">
+                <p class="cs-label reveal"><span>02</span>The approach</p>
+                <div class="cs-body reveal">
+                    <h2>Design the system, then automate the system.</h2>
+                    <ol class="cs-steps">
+                        <li><b>Break emails into a fixed anatomy</b>Every email became header, banner, body and footer. Each zone got its own component variants, so a new campaign starts by duplicating one template rather than a blank file.</li>
+                        <li><b>Build tokens for how email actually renders</b>Email clients don't load custom fonts, so the system uses Nunito from Google Fonts as the closest open match to Agoda's typeface. Buttons, spacing and type sizes are fixed, and each product has its own colour theme.</li>
+                        <li><b>Give each audience its own library</b>The Customer Marketing library covers B2C (price alerts, trip savings, cross-sell). The Partner Communications library covers B2B, with 23 header variants and body layouts. The rule was simple: find the component and name it for the developer, or escalate to me and we add it to the library.</li>
+                        <li><b>Turn the hand-off into a pipeline</b>I spearheaded the production flow below, with Make and Vertex AI automating the repetitive steps between design and send.</li>
+                        <li><b>Localize from one source</b>For campaign assets, copy lives in one Google Sheet with a tab per language. A Figma plugin syncs each language into its template set, so one master design produces every market's version.</li>
+                    </ol>
+                    <div class="cs-flow" aria-label="Production pipeline">
+                        <span>Figma</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span>HTML</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span>Litmus</span><i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span>ESP</span>
+                    </div>
+                </div>
+            </div>
+            <figure class="cs-fig reveal">
+                <img src="../images/cs/email/body.webp" width="1600" height="1445" loading="lazy" decoding="async" alt="Body component variants: generic blocks, flight and hotel cards, coupons, search boxes and card grids, with examples of full email layouts.">
+                <figcaption>Body components: generic blocks plus product cards for hotels, flights, activities and cross-sell, each shown in a full layout.</figcaption>
+            </figure>
+            <div class="cs-pair cs-pair-narrow">
+                <figure class="cs-fig reveal">
+                    <img src="../images/cs/email/tokens.webp" width="1600" height="818" loading="lazy" decoding="async" alt="Email tokens: button specs, product colour themes, Nunito type scale and spacing.">
+                    <figcaption>Tokens: button specs, product colours, an email-safe type scale and spacing.</figcaption>
+                </figure>
+                <figure class="cs-fig reveal" style="--d:1">
+                    <img src="../images/cs/email/template.webp" width="864" height="1019" loading="lazy" decoding="async" alt="The starter email template with header navigation, banner placeholder, body text, product tiles and footer.">
+                    <figcaption>The starter template every campaign duplicates.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="wrap cs-section">
+            <div class="cs-grid">
+                <p class="cs-label reveal"><span>03</span>The solution</p>
+                <div class="cs-body reveal">
+                    <h2>Two libraries, one pipeline, every market.</h2>
+                    <p><strong>For B2C</strong>, banners, product cards and footers snap together into personalized emails: price drops, trip savings, "complete your trip" cross-sell. <strong>For B2B</strong>, the Partner Communications library gives the team a defined colour theme per product and a step-by-step guide, so non-designers can assemble on-brand emails and popups.</p>
+                    <p><strong>For campaigns</strong>, the Pulse template set takes one key visual and turns it into every format (email banner, app popup, homepage banner, LINE ads) for 15 market sets, including Arabic.</p>
+                </div>
+            </div>
+            <figure class="cs-fig reveal">
+                <img src="../images/cs/email/partner.webp" width="1400" height="649" loading="lazy" decoding="async" alt="Partner Communications email and popup component library with a usage guide and colour themes by product.">
+                <figcaption>Partner Communications library: a usage guide for email and popups, plus a defined colour theme for each product.</figcaption>
+            </figure>
+            <div class="cs-pair cs-pair-narrow">
+                <figure class="cs-fig reveal">
+                    <img src="../images/cs/email/pulse-en.webp" width="1600" height="813" loading="lazy" decoding="async" alt="Pulse campaign template for English: one key visual adapted to email, popup, homepage banner and social formats.">
+                    <figcaption>One key visual, every format: the English Pulse set.</figcaption>
+                </figure>
+                <figure class="cs-fig reveal" style="--d:1">
+                    <img src="../images/cs/email/banners.webp" width="548" height="1600" loading="lazy" decoding="async" alt="Banner section variants: static, with badge, and animated GIF banners in desktop and mobile widths.">
+                    <figcaption>Banner variants in desktop and mobile widths.</figcaption>
+                </figure>
+            </div>
+            <figure class="cs-fig reveal">
+                <img src="../images/cs/email/pulse-guide.webp" width="1545" height="1600" loading="lazy" decoding="async" alt="Step-by-step guide: create the key visual, edit components, import Google Sheet copy for each language with a sync plugin, check assets, export.">
+                <figcaption>The guide I wrote so any designer could run localization: key visual → components → Google Sheet sync per language → QA → export.</figcaption>
+            </figure>
+        </section>
+
+        <section class="wrap cs-section">
+            <div class="cs-grid">
+                <p class="cs-label reveal"><span>04</span>The impact</p>
+                <div class="cs-body reveal">
+                    <h2>Faster, more consistent, and ready for personalization.</h2>
+                    <ul>
+                        <li><strong>50% faster production</strong> once the Figma → HTML → Litmus → ESP pipeline was in place.</li>
+                        <li><strong>200+ personalized campaigns a month</strong>, localized for 13+ languages and markets.</li>
+                        <li><strong>One source of truth</strong> for Customer Marketing and Partner Communications, so designers and developers worked from the same components and names.</li>
+                        <li><strong>A base for hyper-personalization:</strong> the same system powered retargeting emails with review summaries and price advisors, which contributed to a $30K+ daily long-term contribution gain.</li>
+                    </ul>
+                    <p class="cs-quote">The goal was never just prettier emails. It was making the right email for the right traveler cheap enough to produce that personalization could scale.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap cs-section">
+            <div class="cs-grid">
+                <p class="cs-label reveal"><span>05</span>What I learned</p>
+                <div class="cs-body reveal">
+                    <h2>Systems only scale when the process does.</h2>
+                    <p>The components mattered, but adoption came from the guides, the naming rules and the escalation path. Writing the "how" as clearly as the "what" let teams outside design ship on-brand work without waiting for me.</p>
+                </div>
+            </div>
+
+            <div class="cs-next reveal" aria-label="Next case study (coming soon)">
+                <div>
+                    <small>Next case study · coming soon</small>
+                    <h3>AI-personalized travel discovery: from hackathon to production</h3>
+                </div>
+                <span class="work-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+            </div>
+        </section>
+    </main>
+
+    <section class="contact" id="contact">
+        <div class="contact-glow" aria-hidden="true"></div>
+        <div class="wrap contact-inner">
+            <h2 class="contact-title reveal">Let's build something <span class="grad-text">people remember.</span></h2>
+            <a class="contact-email reveal" href="mailto:sofianester@gmail.com">sofianester@gmail.com <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="contact-links reveal">
+                <a class="btn btn-ghost magnetic" href="https://www.linkedin.com/in/sofiane-ben/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+                <a class="btn btn-ghost magnetic" href="https://drive.google.com/drive/folders/10J15_QK1muaCdRd8IGOC7ENUlT-Y8qq2?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt" aria-hidden="true"></i> Resume</a>
+            </div>
+        </div>
+        <footer class="wrap footer">
+            <span>© <span id="year">2026</span> Sofiane Benslimane</span>
+            <span>Designed &amp; built by me in Bangkok.</span>
+        </footer>
+    </section>
+
+    <script src="../js/site.js" defer></script>
+</body>
+</html>
