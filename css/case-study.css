@@ -77,3 +77,8 @@
 	.cs-back:hover i { transform: translateX(-3px); }
 	.cs h1 { margin-top: 0; }
 }
+
+/* Three phone screens side by side */
+.cs-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.cs-trio img { width: 100%; border-radius: 16px; }
+@media (max-width: 600px) { .cs-trio { gap: 8px; } .cs-trio img { border-radius: 10px; } }

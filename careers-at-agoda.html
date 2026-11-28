@@ -84,14 +84,14 @@
         <div class="cs-summary">
             <p><b>Role:</b> Lead Designer</p>
             <p><b>Timeline:</b> About 1 year, 2024–2025</p>
-            <p><b>Platform:</b> Responsive web</p>
-            <p><b>Scope:</b> Stakeholder workshops, site audit, benchmarking, wireframes, UI design</p>
+            <p><b>Platform:</b> Responsive web, designed mobile-first</p>
+            <p><b>Scope:</b> Stakeholder workshops, new-hire feedback audit, site audit, benchmarking, wireframes, prototype, mobile and desktop UI, agency handover and build management</p>
             <p><b>Live site:</b> <a class="cs-link" href="https://careersatagoda.com/" target="_blank" rel="noopener noreferrer">careersatagoda.com</a></p>
         </div>
 
         <h2>Project summary</h2>
         <p>I led the redesign of Careers at Agoda, the site where every department at Agoda lists its open roles. The old site was almost ten years old and didn't look like the company Agoda had become.</p>
-        <p>I turned it into a clean, jobs-first site. Live roles now come straight from Greenhouse, the People team's hiring system, and the apply form is shorter and works reliably. <b>Submitted applications went up 12% in the two months after launch.</b></p>
+        <p>I designed a clean, mobile-first, jobs-first site, then handed it over to the external development agency and managed the build through to launch. Live roles now come straight from Greenhouse, the People team's hiring system, and the apply form is shorter and works reliably. <b>Submitted applications went up 12% in the two months after launch.</b></p>
 
         <figure class="wide">
             <img src="images/careers-at-agoda/cover-live-homepage.jpg" width="1432" height="754" decoding="async" alt="The new Careers at Agoda homepage: a light header with the number of open jobs and locations, and job search front and centre.">
@@ -103,6 +103,7 @@
         <h2>The challenge</h2>
         <p class="cs-lead">Make one careers site that represents a big, fast-growing tech company and helps people find the right job fast, while every department owns its own listings.</p>
         <p>The site was shared by the whole company. Each department managed its own jobs and had its own idea of how it should show up. On top of that, the apply flow was broken at times, and some candidates gave up before submitting because the form was too long.</p>
+        <p>And management wanted it live fast. Every design decision had to be quick and safe to build, so nothing would hold up the launch.</p>
 
         <hr>
 
@@ -110,13 +111,22 @@
         <p>Before designing anything, I wanted everyone aligned on what the site had to do. Here is what I did:</p>
         <ul>
             <li>Ran kickoff workshops with Talent Acquisition, HR, PR, Employer Branding and Engineering</li>
+            <li>Audited feedback from recent Agoda new hires on how they found and applied for their job</li>
             <li>Audited the old site to find what was getting in the way of candidates</li>
             <li>Benchmarked the careers sites of Booking.com, Google and Trip.com</li>
-            <li>Looked into the known problems with the apply flow</li>
         </ul>
         <p>Everyone agreed on one direction: <b>a fresh, jobs-first website</b>, clean and focused on job offers, not image-heavy like the old one.</p>
 
-        <h3>What the audit showed</h3>
+        <h3>What new hires told us</h3>
+        <p>People who had just been through the process were our closest view of the candidate experience. Their feedback was consistent:</p>
+        <ul>
+            <li><b>Too image-heavy.</b> The site looked nice but made it hard to get to the jobs.</li>
+            <li><b>Hard to apply.</b> Applying took too long and felt complicated.</li>
+            <li><b>Forms kept opening new tabs</b>, so people lost track of the job they were applying for.</li>
+            <li><b>The apply flow was inconsistent.</b> Sometimes they got a form on the site, and sometimes they were sent to Greenhouse instead.</li>
+        </ul>
+
+        <h3>What the site audit showed</h3>
         <figure>
             <img src="images/careers-at-agoda/before-homepage-2023.jpg" width="1432" height="754" loading="lazy" decoding="async" alt="The old Careers at Agoda homepage: a full-bleed office photo with a script headline reading Begin Your Journey with Agoda, and team, location and keyword search fields below it.">
             <figcaption>The old homepage, December 2023.</figcaption>
@@ -126,7 +136,7 @@
             <li><b>Jobs were buried.</b> Only 8 of 251 open roles were shown on the homepage, far down the page under video, stats, testimonials, benefits and blog posts.</li>
             <li><b>Team names didn't match.</b> The search filters used one set of team names and the job cards used another, because each department managed its own listings.</li>
             <li><b>Empty teams were still shown</b>, with "0 jobs" next to them.</li>
-            <li><b>The apply flow was fragile:</b> it broke at times, and the long form caused drop-offs.</li>
+            <li><b>The apply flow was fragile:</b> it broke at times, the long form caused drop-offs, and it behaved differently from job to job.</li>
         </ul>
 
         <h3>What the benchmark showed</h3>
@@ -146,7 +156,9 @@
             <li>Put job offers at the centre: clean, easy to scan, not image-heavy</li>
             <li>Use one team structure across search, filters and listings, with Greenhouse as the single source of truth</li>
             <li>Pull live jobs from Greenhouse so listings are always up to date</li>
-            <li>Make the apply form shorter and reliable</li>
+            <li>Make applying short, consistent and reliable, in one place</li>
+            <li>Design mobile-first, so the full journey works on a phone</li>
+            <li>Launch fast: keep the design simple to build, with nothing that could cause delays</li>
         </ul>
 
         <hr>
@@ -172,10 +184,33 @@
 
         <hr>
 
+        <h2>Key design decisions</h2>
+        <p><b>Search first, with a live job count.</b> New hires told us the old site was too image-heavy, and people come to a careers site to find a job. So search sits at the top of every main page, with the number of open jobs and locations right above it. The count also does the employer-branding job: it shows the scale of Agoda at a glance, without a big photo.</p>
+        <p><b>Filters next to the results.</b> With 300+ roles across many teams and locations, filtering is how people narrow down. Because team names now come from Greenhouse, the filters always match the job cards, so people can trust them.</p>
+        <p><b>Apply on the job page, in one consistent flow.</b> New hires were confused by forms opening new tabs and by sometimes being sent to Greenhouse. Now the apply form sits right next to the job description, works the same for every job, and never opens a new tab. Candidates can read the role and apply without losing their place, through a short step-by-step form.</p>
+        <p><b>Mobile-first.</b> I designed the mobile screens first and scaled them up to desktop, so search, job details and applying all work on a phone before anything else.</p>
+        <figure>
+            <div class="cs-trio">
+                <img src="images/careers-at-agoda/mobile-ui-1.jpg" width="430" height="880" loading="lazy" decoding="async" alt="Mobile homepage: job count, search by job title or keyword and location, and a Search jobs button.">
+                <img src="images/careers-at-agoda/mobile-ui-2.jpg" width="430" height="880" loading="lazy" decoding="async" alt="Mobile homepage section with global opportunities and a swipeable row of featured jobs.">
+                <img src="images/careers-at-agoda/mobile-ui-3.jpg" width="430" height="880" loading="lazy" decoding="async" alt="Mobile homepage section filtering jobs by region, with a list of cities and their number of available jobs.">
+            </div>
+            <figcaption>Mobile UI: search first, featured jobs, and jobs by location. <a class="cs-link" href="https://www.figma.com/design/ds9gCRlQwF9NuN6ZoB7Jbi/Projects---Sofiane?node-id=0-1" target="_blank" rel="noopener noreferrer">See the mobile and desktop UI in Figma</a>.</figcaption>
+        </figure>
+        <p><b>Simple, buildable components.</b> With management pushing for a fast launch, I kept the design to clean, reusable patterns that the agency's WordPress setup could build quickly. Nothing fancy that would cause problems for the developers or push back the launch date.</p>
+
+        <hr>
+
+        <h2>Handover and build</h2>
+        <p>The site was built by the external agency that already ran the old WordPress site. I ran the design handover and managed the work with the agency myself, through to launch.</p>
+        <p>My front-end background made this much faster. I know how what I design gets built, so the designs were buildable and time-efficient from the start. That meant far less back-and-forth with the agency and no surprises for the developers, which mattered under the pressure to launch fast.</p>
+
+        <hr>
+
         <h2>What changed</h2>
         <p><b>One source of truth for teams.</b> Jobs and team names now come straight from Greenhouse. Filters, listings and team pages always match, and empty teams don't show up anymore.</p>
         <p><b>Jobs first.</b> A clean, offer-led layout replaced the image-heavy homepage, with search and listings at the centre.</p>
-        <p><b>A shorter apply form that works.</b> I cut the form down to the essentials and it was rebuilt to be stable, which fixed both the breakages and the drop-offs from its length.</p>
+        <p><b>A shorter apply form that works.</b> I cut the form down to the essentials, put it on the job page and made it the same for every job. Rebuilt to be stable, it fixed the breakages, the new tabs and the drop-offs from its length.</p>
         <p><b>A brand that fits today's Agoda.</b> A refreshed look that represents a large, global tech company.</p>
         <figure class="wide">
             <img src="images/careers-at-agoda/ui-design-home.jpg" width="1209" height="1450" loading="lazy" decoding="async" alt="Final UI design of the homepage in Figma: job search, a video introducing Agoda, and life at Agoda highlights.">
@@ -197,6 +232,7 @@
 
         <h2>What I learned</h2>
         <p>On a site that every department owns, the hard part isn't the layout, it's getting everyone to agree. Settling the structure in wireframes before showing any visuals kept the discussions focused on what candidates need. And connecting the site to Greenhouse fixed the mismatched team names for good, instead of us cleaning them up by hand.</p>
+        <p>Designing with the build in mind is also a speed tool. Knowing the front end meant we could launch quickly without cutting corners on the experience.</p>
         <p>If I did it again, I'd set up analytics before launch, so we could see where people drop off at each step, not only how many applications come in.</p>
 
         <div class="cs-cta">
