@@ -61,3 +61,19 @@
 .cs-pair img { width: 100%; border-radius: 12px; }
 @media (max-width: 600px) { .cs-pair { grid-template-columns: 1fr; } }
 .cs figure img { border: 1px solid var(--line); }
+
+/* Back to home: pinned on the left of the page on wide screens */
+@media (min-width: 1400px) {
+	.cs-back {
+		position: fixed; z-index: 105; top: 50%; transform: translateY(-50%);
+		left: max(24px, calc((100vw - 1040px) / 2 - 168px)); /* stays clear of the wide images */
+		padding: 10px 16px 10px 12px; border-radius: 999px;
+		background: var(--glass-strong); border: 1px solid var(--line);
+		-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+		transition: color .2s, border-color .2s;
+	}
+	.cs-back:hover { border-color: var(--line-2); }
+	.cs-back i { transition: transform .25s var(--ease); }
+	.cs-back:hover i { transform: translateX(-3px); }
+	.cs h1 { margin-top: 0; }
+}
