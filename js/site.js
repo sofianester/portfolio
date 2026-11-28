@@ -86,9 +86,9 @@
 	// Scroll-driven: progress bar, nav state, timeline fill, active link
 	var nav = document.querySelector('.nav');
 	var timeline = document.querySelector('.timeline');
-	var sections = ['work', 'experience', 'toolkit', 'contact'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
+	var sections = ['case-studies', 'work', 'experience', 'toolkit', 'contact'].map(function (id) { return document.getElementById(id); }).filter(Boolean);
 	var links = {};
-	document.querySelectorAll('.nav-links a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+	document.querySelectorAll('.nav-links a').forEach(function (a) { var h = a.getAttribute('href'); if (h.charAt(0) === '#') links[h.slice(1)] = a; });
 	var lastY = window.scrollY, ticking = false;
 
 	function onScroll() {
