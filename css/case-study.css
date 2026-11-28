@@ -55,3 +55,9 @@
 .cs-cta { margin-top: 80px; padding-top: 56px; border-top: 1px solid var(--line); text-align: center; }
 .cs-cta h2 { margin-top: 0; font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
 .cs-cta .btn { margin-top: 24px; }
+
+/* Two images side by side */
+.cs-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.cs-pair img { width: 100%; border-radius: 12px; }
+@media (max-width: 600px) { .cs-pair { grid-template-columns: 1fr; } }
+.cs figure img { border: 1px solid var(--line); }
